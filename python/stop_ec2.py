@@ -8,6 +8,10 @@ logging.basicConfig(level=os.environ.get('LOG_LEVEL', 'INFO'))
 ec2 = boto3.client('ec2')
 logger = logging.getLogger(__name__)
 
+### SETTING UP VARIABLES
+start = False
+stop = False
+
 ### FUNCTION TO CHECK BOX IS UP AND RUNNING
 def lambda_handler(event, context):
 
@@ -16,19 +20,17 @@ def lambda_handler(event, context):
     'Values': ['NAME OF YOUR EC2 INSTANCE']
     }]
 
-    response = ec2.describe_instances(Filters=filters)
-    # logger.info(response)
     instance_id = ec2.describe_instances(Filters=filters)['Reservations'][0]['Instances'][0]['InstanceId']
     print(f'Instance-id =', instance_id)
     
-    if response['Reservations'][0]['Instances'][0]['State']['Name'] == 'running':
-        logger.info('Instance is running')
+    if start:
+        start_instances(instance_id)
+        logger.info('Instance is starting')
+    elif stop:
         stop_instances(instance_id)
-    elif response['Reservations'][0]['Instances'][0]['State']['Name'] == 'stopped':
-        logger.info('Instance is stopped, exiting lambda')
-        print('Instance is stopped, exiting lambda')
-    else:
         logger.info('Instance is stopping')
+    else:
+        logger.info('No action specified, set start or stop to True')
         error()
 
 ### FUNCTION TO STOP INSTANCE
@@ -43,6 +45,16 @@ def stop_instances(instance_id):
     DryRun=False,
     Force=False
 )
+### FUNCTION TO START INSTANCE
+def start_instances(instance_id):
+    print('starting instance now')
+    ec2.start_instances(
+        InstanceIds=[
+            instance_id,
+        ],
+        # if DryRun=True, then no instances are started -- good for testing
+        DryRun=False
+    )
 
 ### ERROR FUNCTION
 def error():
