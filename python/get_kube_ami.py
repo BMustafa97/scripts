@@ -5,6 +5,8 @@ import requests
 region = 'eu-west-2'
 list_of_amis = []
 ami_name = 'Windows_Server-2022-English-Full-EKS_Optimized-1.27-*' # Change the AMI name here to what you want the latest version to be
+platform = 'windows' # linux or windows
+instance_name = 'INSTANCE_NAME' # Change the instance name here to what you want the latest version to be
 
 def get_current_kube_ami():
     ec2 = boto3.resource(
@@ -15,8 +17,8 @@ def get_current_kube_ami():
     for instance in ec2.instances.all():
         if instance.tags is not None:
             for tag in instance.tags:
-                if tag['Key'] == 'Name' and tag['Value'] == 'INSTANCE_NAME':
-                    if instance.platform == 'windows':
+                if tag['Key'] == 'Name' and tag['Value'] == instance_name:
+                    if instance.platform == platform:
                         # append to a list
                         list_of_amis.append(instance.image_id)
 
