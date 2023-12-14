@@ -40,7 +40,6 @@ def get_latest_kube_ami(list_of_images):
 
     return latest
 
-
 def output_to_teams(new_ami, old_ami):
     # url = '' # Test URL
     url = '' # Kube URL
@@ -54,7 +53,6 @@ def output_to_teams(new_ami, old_ami):
         print("Notification sent successfully!")
     else:
         print("Failed to send notification.")
-
 
 # Main Script
 def main():
