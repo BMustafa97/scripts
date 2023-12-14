@@ -1,0 +1,58 @@
+{'Architecture': 'x86_64', 'CreationDate': '2023-10-02T23: 32: 55.000Z', 'ImageId': 'ami-08c4ced261315ae29', 'ImageLocation': 'amazon/Windows_Server-2022-English-Full-EKS_Optimized-1.27-2023.09.27', 'ImageType': 'machine', 'Public': True, 'OwnerId': '111789216327', 'Platform': 'windows', 'PlatformDetails': 'Windows', 'UsageOperation': 'RunInstances: 0002', 'State': 'available', 'BlockDeviceMappings': [
+        {'DeviceName': '/dev/sda1', 'Ebs': {'DeleteOnTermination': True, 'SnapshotId': 'snap-0b27763c55f4a1986', 'VolumeSize': 50, 'VolumeType': 'gp2', 'Encrypted': False
+            }
+        },
+        {'DeviceName': 'xvdca', 'VirtualName': 'ephemeral0'
+        },
+        {'DeviceName': 'xvdcb', 'VirtualName': 'ephemeral1'
+        },
+        {'DeviceName': 'xvdcc', 'VirtualName': 'ephemeral2'
+        },
+        {'DeviceName': 'xvdcd', 'VirtualName': 'ephemeral3'
+        },
+        {'DeviceName': 'xvdce', 'VirtualName': 'ephemeral4'
+        },
+        {'DeviceName': 'xvdcf', 'VirtualName': 'ephemeral5'
+        },
+        {'DeviceName': 'xvdcg', 'VirtualName': 'ephemeral6'
+        },
+        {'DeviceName': 'xvdch', 'VirtualName': 'ephemeral7'
+        },
+        {'DeviceName': 'xvdci', 'VirtualName': 'ephemeral8'
+        },
+        {'DeviceName': 'xvdcj', 'VirtualName': 'ephemeral9'
+        },
+        {'DeviceName': 'xvdck', 'VirtualName': 'ephemeral10'
+        },
+        {'DeviceName': 'xvdcl', 'VirtualName': 'ephemeral11'
+        },
+        {'DeviceName': 'xvdcm', 'VirtualName': 'ephemeral12'
+        },
+        {'DeviceName': 'xvdcn', 'VirtualName': 'ephemeral13'
+        },
+        {'DeviceName': 'xvdco', 'VirtualName': 'ephemeral14'
+        },
+        {'DeviceName': 'xvdcp', 'VirtualName': 'ephemeral15'
+        },
+        {'DeviceName': 'xvdcq', 'VirtualName': 'ephemeral16'
+        },
+        {'DeviceName': 'xvdcr', 'VirtualName': 'ephemeral17'
+        },
+        {'DeviceName': 'xvdcs', 'VirtualName': 'ephemeral18'
+        },
+        {'DeviceName': 'xvdct', 'VirtualName': 'ephemeral19'
+        },
+        {'DeviceName': 'xvdcu', 'VirtualName': 'ephemeral20'
+        },
+        {'DeviceName': 'xvdcv', 'VirtualName': 'ephemeral21'
+        },
+        {'DeviceName': 'xvdcw', 'VirtualName': 'ephemeral22'
+        },
+        {'DeviceName': 'xvdcx', 'VirtualName': 'ephemeral23'
+        },
+        {'DeviceName': 'xvdcy', 'VirtualName': 'ephemeral24'
+        },
+        {'DeviceName': 'xvdcz', 'VirtualName': 'ephemeral25'
+        }
+    ], 'Description': 'Microsoft Windows Server 2022 Full optimized for EKS and provided by Amazon', 'EnaSupport': True, 'Hypervisor': 'xen', 'ImageOwnerAlias': 'amazon', 'Name': 'Windows_Server-2022-English-Full-EKS_Optimized-1.27-2023.09.27', 'RootDeviceName': '/dev/sda1', 'RootDeviceType': 'ebs', 'SriovNetSupport': 'simple', 'VirtualizationType': 'hvm', 'DeprecationTime': '2025-10-02T23: 32: 55.000Z'
+}
