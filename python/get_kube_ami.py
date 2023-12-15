@@ -43,7 +43,6 @@ def get_latest_kube_ami(list_of_images):
     return latest
 
 def output_to_teams(new_ami, old_ami):
-    # url = '' # Test URL
     url = '' # Kube URL
     headers = {'Content-Type': 'application/json'}
     payload = {
@@ -95,4 +94,3 @@ def main():
 
 def lambda_handler(event, context):
     main()
-
