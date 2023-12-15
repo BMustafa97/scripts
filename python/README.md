@@ -1,5 +1,3 @@
-# Explanation of scripts
-
 ## Run the script via the below command
 
 `python3 script.py`
