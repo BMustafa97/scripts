@@ -1,4 +1,4 @@
-## Run the script via the below command
+## Run the scripts via the below command
 
 `./ip_data.sh`
 
